@@ -1,0 +1,47 @@
+<span class="centered-button"><a href="#"></a></span>
+<style>
+.centered-button {
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+    justify-content: center;
+}
+.centered-button a {
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+}
+.centered-button a:before,
+.centered-button a:after {
+    position: absolute;
+    content: "button";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E1C582;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #E1C582;
+}
+.centered-button a:before {
+    color: #fff;
+    background: #256224;
+    transform: rotateY(0deg) translateZ(25px);
+    content: "Button";
+}
+.centered-button a:after {
+    color: #000000;
+    transform: rotateX(90deg) translateZ(25px);
+}
+.centered-button a:hover {
+    transform: translateZ(-25px) rotateX(-90deg);
+}
+</style>
